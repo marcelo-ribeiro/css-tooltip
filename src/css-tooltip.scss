@@ -1,0 +1,42 @@
+//
+// ==================================
+// #CSS-TOOLTIP
+// ==================================
+//
+// Variables
+//
+$tooltip-background: rgba(#222, .9);
+$tooltip-border-radius: 0.75em;
+//
+// Styles
+//
+[data-tooltip] {
+  box-sizing: border-box;
+
+  &:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: 2em;
+    margin-left: .5em;
+    padding: 0.75em 1em;
+    line-height: 1.25em;
+    background: $tooltip-background;
+    color: rgba(#fff, 0.8);
+    font-size: 12px;
+    text-align: center;
+    border-radius: $tooltip-border-radius;
+    border-top-left-radius: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px, rgba(0, 0, 0, 0.2) 0 2px 4px;
+    transition: all .2s linear;
+  }
+
+  &:hover:after,
+  &:focus:after {
+    visibility: visible;
+    opacity: 1;
+  }
+
+}

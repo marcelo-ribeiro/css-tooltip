@@ -6,12 +6,22 @@ module.exports = function(grunt) {
     sass: {
       options: {
         sourcemap: 'none',
-        style: 'expanded',
         noCache: true
       },
-      dist: {
+      prod: {
+        options: {
+          style: 'expanded'
+        },
         files: {
           'dist/css-tooltip.css': 'src/css-tooltip.scss'
+        }
+      },
+      dist: {
+        options: {
+          style: 'compressed'
+        },
+        files: {
+          'dist/css-tooltip.min.css': 'src/css-tooltip.scss'
         }
       }
     },

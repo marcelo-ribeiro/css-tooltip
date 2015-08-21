@@ -1,6 +1,3 @@
-[data-tooltip] {
-  box-sizing: border-box;
-}
 [data-tooltip]:after {
   content: attr(data-tooltip);
   position: absolute;

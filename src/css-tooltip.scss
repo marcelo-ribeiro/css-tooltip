@@ -7,11 +7,11 @@
 //
 $tooltip-background: rgba(#222, .9);
 $tooltip-border-radius: 0.75em;
+$tooltip-font-size: 12px;
 //
 // Styles
 //
 [data-tooltip] {
-  box-sizing: border-box;
 
   &:after {
     content: attr(data-tooltip);
@@ -25,7 +25,7 @@ $tooltip-border-radius: 0.75em;
     line-height: 1.25em;
     background: $tooltip-background;
     color: rgba(#fff, 0.8);
-    font-size: 12px;
+    font-size: $tooltip-font-size;
     text-align: center;
     border-radius: $tooltip-border-radius;
     border-top-left-radius: 0;
